@@ -65,3 +65,7 @@ gem 'mimemagic'
 gem 'carrierwave'
 
 gem 'bcrypt'
+
+group :development do
+  gem 'letter_opener_web'
+end
