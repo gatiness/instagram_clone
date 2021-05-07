@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-
+<div class="main">
 <h2>Posts</h2>
 
 <table>
@@ -23,8 +23,10 @@
         <td><%= post.image %></td>
         <td><%= link_to post.user.name, user_path(post.user.id) %></td>
         <td><%= link_to 'Description', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if post.user.id == current_user.id %>
+          <td><%= link_to 'Edit', edit_post_path(post) %></td>
+          <td><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>  
       </tr>
     <% end %>
   </tbody>
@@ -33,3 +35,4 @@
 <br>
 
 <%= link_to 'New Post', new_post_path %>
+</div>

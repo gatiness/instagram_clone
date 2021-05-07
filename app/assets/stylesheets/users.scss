@@ -4,3 +4,28 @@
 .user-icon {
   border-radius: 100px;
 }
+
+body {
+  background: linear-gradient(-250deg, #E4A972, #9941D8);
+}
+
+nav {
+  background: -webkit-linear-gradient(0deg, #405DE6, #5851DB, #833AB4, #E1306C, #f50bc2);
+}
+
+foot-nav {
+  display:flex;
+  justify-content: center;
+}
+
+.header-menu {
+  color: black;
+}
+
+#footer {
+  margin-left: 30%;
+}
+  
+.main {
+  margin-left: 7%;
+} 
